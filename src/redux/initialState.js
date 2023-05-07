@@ -1,0 +1,27 @@
+export const initialState = {
+  title: "Hello",
+  inputValue: "",
+  counter: 0,
+  inputToList: "",
+  taskLists: [],
+  posts: {
+    post: [],
+    loading: false,
+  },
+  toDoItems: {
+    items: [],
+    loading: false,
+    fromToDoInputValue: '',
+  },
+  elementForForm: {
+    valueForInputForm:"",
+    valueForInputFormSecond:"",
+    valueForInputFormThird:"",
+    jsonFormData:[],
+  },
+  conversion:{
+    conversionInputValue:"",
+    didConverseValue:"",
+  }
+
+}
