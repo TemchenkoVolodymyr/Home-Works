@@ -1,0 +1,64 @@
+$form-border-color: #bb6834;
+$form-border-width: 1px;
+$form-background-color: #c0bebe;
+$input-padding: 10px;
+$font-size: 20px;
+$border-none:none;
+$main-color: #fcfcfc;
+$border-radius:20px;
+*:before, *:after {
+  box-sizing: border-box;
+}
+.formMain {
+  background-color: $form-background-color;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $input-padding;
+}
+.formMain__input{
+  max-width:100vh;
+  margin: 0 auto;
+}
+.input{
+  color:$main-color;
+  font-size: $font-size;
+  width: 100%;
+  border: $border-none;
+  border-radius:$border-radius;
+  box-shadow:0 0 15px 4px rgba(229, 185, 185, 0.06);
+  background-color: #000000;
+  margin: $input-padding 0 ;
+  padding: 25px;
+  &:focus {
+    outline: none;
+    background-color: lighten($form-background-color, 10%);
+  }
+}
+.button{
+  background-color: $main-color;
+  width: 50vh;
+  border:$border-none;
+  border-radius:$border-radius;
+  box-shadow: 10px 0 5px 4px rgba(103, 16, 16, 0.06);
+  color: #000000;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: $font-size;
+  &:hover {
+    background-color: darken(#c0bebe, 10%);
+  }
+}
+.formMain__btnWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.formMain__header{
+  display: flex;
+  justify-content: center;
+}
+.header{
+  color:$main-color;
+}

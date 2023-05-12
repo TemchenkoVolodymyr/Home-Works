@@ -1,0 +1,7 @@
+.links_wrapper{
+    display: flex;
+    justify-content: center;
+}
+.link{
+    padding: 0 10px;
+}

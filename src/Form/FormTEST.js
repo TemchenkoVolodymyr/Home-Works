@@ -3,9 +3,10 @@ import Input from "./Input/Input";
 import {connect} from "react-redux";
 import {addJsonData, inputActionCreator, inputActionCreatorSecond, inputActionCreatorThird} from "./Input/inputAction";
 import {conversionAC} from "./inputForConversionValue/conversionAC";
-import Conversion from "./inputForConversionValue/Conversion";
+import ConvInputFirst from "./inputForConversionValue/Conversion";
+import style from "./FormTEST.module.css"
 
-class Form extends Component {
+class FormTEST extends Component {
 
   removeHandler(e) {
     e.preventDefault()
@@ -24,16 +25,21 @@ class Form extends Component {
     const {dispatch,conversionValue,didConverseValue} = this.props
     return (
       <>
-        <form >
-          <Input value={valueForInputForm} dispatch={dispatch} actionCreator={inputActionCreator}/>
-          <Input value={valueForInputFormSecond} dispatch={dispatch} actionCreator={inputActionCreatorSecond} />
-          <Input value={valueForInputFormThird} dispatch={dispatch} actionCreator={inputActionCreatorThird}/>
-          <input type="submit" value="add" onClick={(e) => this.removeHandler(e)}/>
+        <div className={style.container}>
+        <form className={style.form}>
+         <p>Name</p>
+          <Input value={valueForInputForm} dispatch={dispatch} actionCreator={inputActionCreator} placeholder={"Введите ваше имя"}/>
+          <p>Surname</p>
+          <Input value={valueForInputFormSecond} dispatch={dispatch} actionCreator={inputActionCreatorSecond} placeholder={"Введите вашу Фамилию"} />
+          <p>City</p>
+          <Input value={valueForInputFormThird} dispatch={dispatch} actionCreator={inputActionCreatorThird} placeholder={"Введите ваш город"}/>
+          <input className={style.Submit} type="submit" value="add" onClick={(e) => this.removeHandler(e)} />
         </form>
         {jsonFormData.map(item => <p>{item}</p>)}
         <br />
-        <Conversion value={conversionValue} dispatch={dispatch} actionCreator={conversionAC}/>
+        <ConvInputFirst value={conversionValue} dispatch={dispatch} actionCreator={conversionAC}/>
         <p>{didConverseValue}</p>
+        </div>
       </>
     );
   }
@@ -46,4 +52,4 @@ let mapStateToProps = (store) => {
     didConverseValue:store.conversionValue.didConverseValue,
   }
 }
-export default connect(mapStateToProps)(Form);
+export default connect(mapStateToProps)(FormTEST);

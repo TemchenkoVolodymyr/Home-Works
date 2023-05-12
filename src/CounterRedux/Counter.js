@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {addCurrentCounter, decrementCurrentCounter, randomCounterValue, resetCounter} from "./counterAction";
+import {Link} from "react-router-dom";
 
 
 export const createRandomValue = () => {
@@ -16,6 +17,7 @@ class Counter extends Component {
        <button onClick={() => this.props.dispatch(decrementCurrentCounter())}>decrement</button>
        <button onClick={() => this.props.dispatch(randomCounterValue())}>random</button>
        <button onClick={() => this.props.dispatch(resetCounter())}>reset</button>
+       <Link className="link" to='/secondCounter'>secondCounter</Link>
      </>
     );
   }

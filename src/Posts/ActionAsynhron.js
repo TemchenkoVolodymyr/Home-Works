@@ -15,7 +15,6 @@ export const loadPostAction = () => {
 
     axios.get("https://jsonplaceholder.typicode.com/posts")
       .then(response =>{
-
         dispatch({
           type:LOADING_END,
           posts:response.data

@@ -8,6 +8,10 @@ import {postsReducer} from "../Posts/postsReducer";
 import {toDoReducers} from "../ToDoAsynhron/toDoReducer";
 import {inputReducer} from "../Form/Input/inputReducer";
 import {conversionReducer} from "../Form/inputForConversionValue/conversionReducer";
+import {formikReducer} from "../Formik/FormikReducer";
+import {toDoListReducer} from "../ToDoListAsynchron/toDoListAsychronReducer";
+import {usersReducer} from "../CreateUsersBox/Users/usersReducer";
+import { reducer as formReducer } from 'redux-form';
 
 
 
@@ -23,4 +27,8 @@ export default combineReducers ({
   toDoItems:toDoReducers,
   inputForForm:inputReducer,
   conversionValue:conversionReducer,
+  formikData:formikReducer,
+  toDo:toDoListReducer,
+  users:usersReducer,
+  form:formReducer,
 })

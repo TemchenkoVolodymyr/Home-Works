@@ -1,28 +1,24 @@
 import React, {Component} from "react";
 import './App.css';
-import SearchBar from "./MiniProject/SearchBar";
-import Counter from "./CounterRedux/Counter";
-import ToDo from "./ToDo/ToDo";
-import Posts from "./Posts/Posts";
-import ToDoList from "./ToDoAsynhron/ToDoList";
-import Form from "./Form/Form";
-import Conversion from "./Lessons_5/Task_2/Conversion";
+import {connect} from "react-redux";
+import {
+  RouterProvider,
+} from "react-router-dom";
+import {router} from "./router/router";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Form />         {/*ДОМАШНЯЯ РАБОТА № 5. ФОРМЫ*/}
-        {/*<Conversion />*/}
-        {/*<SearchBar/>*/}
-        {/*<Counter />*/}
-        {/*<br />*/}
-        {/*<ToDo />*/}
-        {/*<Posts />*/}
-        {/*<ToDoList />*/}
-      </div>
-    )
+const App = () => {
+  return (
+    <div>
+      <RouterProvider router={router} />
+    </div>
+
+  );
+};
+
+let mapStateToProps = (store) => {
+  return {
+    formikData: store.formikData
   }
 }
+export default connect(mapStateToProps)(App);
 
-export default App;

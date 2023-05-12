@@ -1,0 +1,23 @@
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #69d704;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+
+
+}
+.Submit{
+  height: 50px;
+  color: #ea3f0a;
+  background-color: #1e5dd2;
+  font-size: 20px;
+}
+.Submit:hover {
+  background-color: #ea3f0a;
+  color: #090909;
+}
+

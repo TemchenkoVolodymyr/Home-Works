@@ -22,6 +22,19 @@ export const initialState = {
   conversion:{
     conversionInputValue:"",
     didConverseValue:"",
-  }
+  },
+  dataForm:{
+    inputName:"",
+    inputEmail:"",
+    inputPassword:"",
+    placeForDataJson:[],
+  },
+  toDo:{
+    toDo:[],
+    loading:false,
+  },
+  usersData:{
+    users:[],
+  },
 
 }
