@@ -13,9 +13,12 @@ class UsersBox extends Component {
   render() {
     let {users} = this.props.users
     return (
+      <>
+      <h1>USERS</h1>
      <div className={style.userBox}>
        <Users users={users}/>
      </div>
+        </>
     );
   }
 }

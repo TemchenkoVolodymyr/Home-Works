@@ -12,6 +12,8 @@ import {formikReducer} from "../Formik/FormikReducer";
 import {toDoListReducer} from "../ToDoListAsynchron/toDoListAsychronReducer";
 import {usersReducer} from "../CreateUsersBox/Users/usersReducer";
 import { reducer as formReducer } from 'redux-form';
+import {authorizationReducer} from "../router/requireAuth/AuthorizationReducer";
+import {reducerComponentA} from "../Lesson-7/CallbackRedux/reducerComponentA";
 
 
 
@@ -31,4 +33,6 @@ export default combineReducers ({
   toDo:toDoListReducer,
   users:usersReducer,
   form:formReducer,
+  isAuth:authorizationReducer,
+  componentValue:reducerComponentA
 })

@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {usersApi} from "../API/api";
+import {usersApi} from "../../API/api";
 import {useParams} from "react-router";
-import {Link} from "react-router-dom";
-import Loader from "../Loader/Loader";
+import Loader from "../../Loader/Loader";
+import "./ShowInfo.css"
 
 const ShowInfo = () => {
 
@@ -15,7 +15,6 @@ const ShowInfo = () => {
     setPending(true)
     usersApi.getInfo(id)
       .then(response => {
-
         setUserInfo(response.data)
         setPending(false)
       })
@@ -29,13 +28,13 @@ const ShowInfo = () => {
     return <Loader />
   }
   return (
-    <div>
+    <div className="user-info">
       <h1>{name}</h1>
       <ul>
-        <li>{username}</li>
-        <li>{email}</li>
-        <li>{phone}</li>
-        <li>{website}</li>
+        <li><span>Username:</span>{username}</li>
+        <li><span>Email:</span>{email}</li>
+        <li><span>Phone number: </span>{phone}</li>
+        <li><span>website:</span>{website}</li>
       </ul>
     </div>
   );

@@ -10,10 +10,14 @@ const AuthProvider = ({children}) => {
   const login = (callback) => {
    setIsAuth(true)
     callback()
+
   }
   const logout = (callback) => {
     setIsAuth(false)
-    callback()
+    if(callback) {
+      callback()
+    }
+
   }
 
   let value = {isAuth,login,logout}

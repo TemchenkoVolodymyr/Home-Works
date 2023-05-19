@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ControlInput from "./ControlInput";
+import ControlInput from "./ControlInput/ControlInput";
 import "./ControlForm.css"
 
 const ControlForm = () => {

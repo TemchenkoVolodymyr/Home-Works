@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {usersApi} from "../API/api";
-import "./ShowListOfNames.css"
-import {Link} from "react-router-dom";
+import {usersApi} from "../../API/api";
+import "./ShowNames.css"
+import CustomLink from "../../router/Header/CustomLink/CustomLink";
 
 const ShowNames = () => {
   let [names, setNames] = useState([])
@@ -14,7 +14,7 @@ const ShowNames = () => {
   }, [])
 
 
-  let name = names.map(name => <Link to={`name/${name.id}`}><li key={name.id}>{name.name}</li></Link>)
+  let name = names.map(name => <CustomLink to={`name/${name.id}`}><li key={name.id}>{name.name}</li></CustomLink>)
 
   return (
     <div className="div__container">

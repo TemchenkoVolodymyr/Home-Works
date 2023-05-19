@@ -1,0 +1,53 @@
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 500px 500px;
+}
+
+.wrapper-image {
+    grid-column: 1;
+    border: 4px double #bd6c46;
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.wrapper-image img {
+    max-width: 500px;
+
+}
+
+.wrapper-description {
+    grid-column: 2;
+    padding: 0 50px;
+    background-color: rgba(128, 97, 62, 0.29);
+
+}
+
+.wrapper-image:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=90);
+    border-radius: 50%;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.description-header {
+    font-family: ‘Rouge Script’,
+    cursive;
+    font-size: 50px;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px #082b34;
+}
+.description-list{
+    list-style: none;
+    text-align: left;
+}
+.description-list li{
+    padding: 5px;
+}
+.description-list li:hover{
+   color: #e5430a;
+}
+

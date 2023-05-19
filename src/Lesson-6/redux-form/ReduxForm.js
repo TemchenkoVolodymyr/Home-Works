@@ -1,39 +1,37 @@
 import React, {useState} from "react";
-import {connect} from "react-redux";
 import {Field, reduxForm} from "redux-form";
 import "./ReduxForms.css"
 import {useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
-import {useAuth} from "../router/requireAuth/useAuth";
+import {useAuth} from "../../router/requireAuth/useAuth";
 
 
 export const FormHomeLesson = (props) => {
-
-console.log(useLocation())
-
 
   let {handleSubmit} = props
 
   return (
     <>
 
-      <form onSubmit={handleSubmit} className="formMain">
-        <div className="formMain__header">
+      <form onSubmit={handleSubmit} className="form">
+        <div className="container-form">
+        <div className="form-header">
           <h1 className="header">Login</h1>
         </div>
 
-        <div className={"formMain__input"}>
-          <Field className="input" name="email" component="input" type="text" placeholder="username"/>
-          <Field className="input" name="password" component="input" type="password" placeholder={"password"}/>
+        <div className="form-inputs">
+          <Field className="input-item" name="email" component="input" type="text" placeholder="username"/>
+          <Field className="input-item" name="password" component="input" type="password" placeholder={"password"}/>
         </div>
-        <div className="formMain__btnWrapper">
+        <div className="form-btns">
           <div>
-            <Field name="rememberMe" component="input" type={"checkbox"}/> remember me
+            <Field name="btn-remember" component="input" type={"checkbox"}/> remember me
           </div>
           <button className="button">Send</button>
         </div>
         <div>
 
+        </div>
         </div>
       </form>
     </>
@@ -47,14 +45,14 @@ const LoginFormRedux = reduxForm({
 
 const HomeForm = () => {
   const location = useLocation()
-  const fromPage = location.state.from.pathname || "/"
+  // const fromPage = location.state.from.pathname || "/"
   const navigate = useNavigate()
 
   const {login} = useAuth()
 
 
   const onSubmit = (formData) => { // в formData попадуют данные с инпутов
-    login(() => navigate(fromPage,{replace:true}))
+    // login(() => navigate(fromPage,{replace:true}))
   }
   return (
     <>

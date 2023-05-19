@@ -1,9 +1,10 @@
 import axios from "axios";
 
 
-export const LOADING_START ="LOADING-START"
-export const LOADING_END ="LOADING-END"
-export const LOADING_ERROR ="LOADING-ERROR"
+export const LOADING_START ="LOADING-START";
+export const LOADING_END ="LOADING-END";
+export const LOADING_ERROR ="LOADING-ERROR";
+
 
 
 export const loadPostAction = () => {

@@ -10,11 +10,18 @@ export const toDoApi = {
   getToDoItems() {
     return instance.get(`todos`)
   },
-  getPostsItems() {
-    return instance.get(`posts`)
-  },
   getUsers() {
     return instance.get('users')
+  }
+}
+
+export const usersApi = {
+  getName () {
+    return instance.get('users')
+  },
+  getInfo(id) {
+    return instance.get(`users/${id}`)
+
   }
 }
 

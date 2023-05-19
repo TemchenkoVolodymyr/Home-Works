@@ -12,6 +12,7 @@ const Hover = () => {
 
   return (
     <>
+      <h1>HOVER</h1>
       <div ref={ref} style={{width:300,height:300,background: isHovering ? "brown" : "orange"}}></div>
       <div ref={refSecondDiv} style={{width:300,height:300,background: isHoveringSecondDiv ? "blue" : "green"}}></div>
     </>

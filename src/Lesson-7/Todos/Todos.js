@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import Delete from "../assets/delete.png"
-import Done from "../assets/done.png"
-import IsntDone from "../assets/isntDone.png"
+import Delete from "../../assets/delete.png"
+import Done from "../../assets/done.png"
+import IsntDone from "../../assets/isntDone.png"
 import "./Todos.css"
 
 

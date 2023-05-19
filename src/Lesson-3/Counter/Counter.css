@@ -1,0 +1,25 @@
+.calc__inputs {
+    display: flex;
+    flex-direction: column;
+}
+.calc__inputs input {
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 2px 2px 12px #ff7c11;
+    font-size: 20px;
+    border: none;
+}
+.calc__btns button{
+    padding: 15px;
+    margin: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.calc__btns button:hover{
+    background-color: rgba(255, 124, 17, 0.42);
+    box-shadow: 2px 2px 12px #ff112d;
+    color: rgb(255, 124, 17);
+
+
+}

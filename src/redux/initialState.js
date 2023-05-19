@@ -2,6 +2,8 @@ export const initialState = {
   title: "Hello",
   inputValue: "",
   counter: 0,
+  isAuth: false,
+  isLogin:false,
   inputToList: "",
   taskLists: [],
   posts: {
@@ -36,5 +38,6 @@ export const initialState = {
   usersData:{
     users:[],
   },
+  valueComponentA: "",
 
 }

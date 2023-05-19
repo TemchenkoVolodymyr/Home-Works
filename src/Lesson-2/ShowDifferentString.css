@@ -1,0 +1,11 @@
+
+.main__string{
+    color: rgba(87, 26, 64, 0.71);
+    text-shadow: 2px 2px 2px #945d94;
+    padding: 15px;
+    font-size: 25px;
+}
+.main__string:hover{
+    text-shadow: 5px 5px 5px #7f8137;
+    cursor: pointer;
+}

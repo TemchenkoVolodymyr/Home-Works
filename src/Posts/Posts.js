@@ -1,26 +1,33 @@
-import React, {Component} from 'react';
-import {connect} from "react-redux";
+import React, {Component, useEffect, useReducer} from 'react';
+import {connect, useDispatch} from "react-redux";
 import {loadPostAction} from "./ActionAsynhron";
 import Loader from "../Loader/Loader";
+import "./Posts.css"
+import {Link, useLocation} from "react-router-dom";
+import CustomLink from "../router/Header/CustomLink/CustomLink";
+import {postsReducer} from "./postsReducer";
+import {initialState} from "../redux/initialState";
 
-class Posts extends Component {
-  componentDidMount() {
-    // тут мы используем "замыкание", такой синтаксис нужен для того что бы dispatch передать внутрь функции loadPostAction и там вызывать dispatch
-    this.props.dispatch(loadPostAction())
-  }
-
-  render() {
-    return (
-      <>
-        {this.props.loading ? <Loader /> : null}
+const Posts = (props) => {
+console.log(useLocation())
+  useEffect(() => {
+    props.dispatch(loadPostAction())
+  },[])
+  return (
+    <>
+      <h1>POSTS</h1>
+      <CustomLink to={"/post/new"}>Create New Post</CustomLink>
+      {props.loading ? <Loader/> : null}
       <ul>
-        {this.props.post.map(post => <li key={post.id}>{post.title}</li>)}
+        {props.post.map(post => (
+          <Link key={post.id} to={`/post/${post.id}`}>
+            <li className="lists">{post.id}. {post.title}</li>
+          </Link>
+        ))}
       </ul>
-      </>
-    );
-  }
+    </>
+  )
 }
-
 const mapStateToProps = (store) => {
   return {
     post: store.posts.post,

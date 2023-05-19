@@ -9,7 +9,7 @@ header {
 }
 
 .wrapper__outlet {
-    margin: 50px;
+    margin: 0 auto;
     grid-column: 2;
-text-align: center;
+    text-align: center;
 }

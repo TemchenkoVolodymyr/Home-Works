@@ -1,65 +1,76 @@
 *:before, *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.formMain {
-  background-color: #c0bebe;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px;
+.form {
+    background-color: #c0bebe;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
-.formMain__input {
-  max-width: 100vh;
-  margin: 0 auto;
+.container-form {
+    width: 600px;
 }
 
-.input {
-  color: #fcfcfc;
-  font-size: 20px;
-  width: 100%;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 0 15px 4px rgba(229, 185, 185, 0.06);
-  background-color: #000000;
-  margin: 10px 0;
-  padding: 25px;
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
 }
-.input:focus {
-  outline: none;
-  background-color: #d9d8d8;
+
+.input-item {
+    color: #fcfcfc;
+    font-size: 20px;
+    width: 400px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 4px rgba(229, 185, 185, 0.06);
+    background-color: #000000;
+    margin: 10px 0;
+    padding: 25px;
+}
+
+.input-item:focus {
+    outline: none;
+    background-color: #d9d8d8;
 }
 
 .button {
-  background-color: #fcfcfc;
-  width: 50vh;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 10px 0 5px 4px rgba(103, 16, 16, 0.06);
-  color: #000000;
-  padding: 10px;
-  margin-top: 10px;
-  cursor: pointer;
-  font-size: 20px;
+    background-color: #fcfcfc;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 10px 0 5px 4px rgba(103, 16, 16, 0.06);
+    color: #000000;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 20px;
 }
+
 .button:hover {
-  background-color: #a7a4a4;
+    background-color: #a7a4a4;
 }
 
-.formMain__btnWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.form-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.formMain__header {
-  display: flex;
-  justify-content: center;
+.form-header {
+    display: flex;
+    justify-content: center;
 }
 
 .header {
-  color: #fcfcfc;
+    color: #fcfcfc;
 }
 
-/*# sourceMappingURL=ReduxForms.css.map */
+.btn-remember {
+    width: 50px;
+}
+

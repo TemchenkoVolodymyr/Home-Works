@@ -1,0 +1,21 @@
+.user-info ul {
+    list-style: none;
+}
+
+.user-info li {
+    padding: 5px;
+    font-size: 20px;
+    color: rgba(117, 39, 117, 0.8);
+
+}
+
+.user-info {
+    width: 500px;
+    box-shadow: 2px 2px 22px rgba(117, 39, 117, 0.8);;
+}
+
+.user-info ul span {
+    color: rgb(3, 3, 3);
+
+
+}

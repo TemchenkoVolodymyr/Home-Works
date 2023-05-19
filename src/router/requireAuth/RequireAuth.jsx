@@ -6,8 +6,10 @@ import {useAuth} from "./useAuth";
 const RequireAuth = ({children}) => {
   console.log(useAuth)
   let location = useLocation()
+  console.log(location)
 
   let {isAuth} = useAuth()
+
 
 
    if(!isAuth) {

@@ -1,2 +1,15 @@
-
-
+.link-active{
+    color: #c01145;
+    font-size: 18px;
+    text-decoration: none;
+    padding:  10px;
+}
+.link{
+    text-decoration: none;
+    padding:  10px;
+    color: #151515;
+    font-size: 20px;
+}
+.link:hover {
+    color: #c04b0c;
+}

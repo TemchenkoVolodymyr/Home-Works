@@ -31,10 +31,13 @@ const ListForHook = () => {
   }
   // overflow : "auto " что бы получить ползунок
   return (
+    <>
+      <h1>PAGINATION</h1>
     <div ref={refParent} style={{overflow:"auto",height:"80vh"}}>
       {todos.map(item => <p key={item.id} style={{border: "2px solid black", padding: 10}}>{item.id}.{item.title}</p>)}
       <div ref={refChild} style={{height: 30, background: "red"}}></div>
     </div>
+    </>
   );
 };
 

@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {getDoListItemAC} from "./ToDoListAction";
+import {compose} from "redux";
+import RequireAuth from "../router/requireAuth/RequireAuth";
 
 
 
@@ -26,4 +28,6 @@ let mapStateToProps = (store) => {
     toDo:store.toDo
   }
 }
-export default connect(mapStateToProps)(ToDoListAsynchron);
+export default compose(
+  connect(mapStateToProps),
+)(ToDoListAsynchron);

@@ -1,9 +1,11 @@
 import React from 'react';
 import {Navbar} from "./Navbar";
 import {Outlet} from "react-router";
-import "./Header.css"
+import "./Layout.css"
 
-const Header = () => {
+const Layout = () => {
+
+  // там где мы поместим наш Outlet там и будет показываться контент наших страниц ссылки на которые находятся в Navbar
   return (
   <>
     <div className="container">
@@ -19,4 +21,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Layout;
