@@ -2,10 +2,17 @@ import React, {useState} from "react";
 import {connect} from "react-redux";
 import {Field, reduxForm} from "redux-form";
 import "./ReduxForms.css"
+import {useNavigate} from "react-router";
+import {useLocation} from "react-router-dom";
+import {useAuth} from "../router/requireAuth/useAuth";
 
 
 export const FormHomeLesson = (props) => {
-  const {handleSubmit} = props
+
+console.log(useLocation())
+
+
+  let {handleSubmit} = props
 
   return (
     <>
@@ -38,9 +45,16 @@ const LoginFormRedux = reduxForm({
 })(FormHomeLesson)
 
 
-const HomeForm = (props) => {
-  console.log(props)
+const HomeForm = () => {
+  const location = useLocation()
+  const fromPage = location.state.from.pathname || "/"
+  const navigate = useNavigate()
+
+  const {login} = useAuth()
+
+
   const onSubmit = (formData) => { // в formData попадуют данные с инпутов
+    login(() => navigate(fromPage,{replace:true}))
   }
   return (
     <>
@@ -51,4 +65,4 @@ const HomeForm = (props) => {
 }
 
 
-export default connect()(HomeForm);
+export default HomeForm;
