@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
 const style = {
-  position: 'absolute' ,
+  position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
@@ -27,17 +27,17 @@ const Todos = () => {
       {
         text: "some text",
         id: 0,
-        isDone:false,
+        isDone: false,
       },
       {
         text: "Great pleasure",
-        id:1,
-        isDone:false,
+        id: 1,
+        isDone: false,
       },
       {
         text: "Keep your mind",
         id: 2,
-        isDone:false,
+        isDone: false,
       }
 
     ]
@@ -50,9 +50,10 @@ const Todos = () => {
   const handleClose = () => setOpen(false);
 
   const addTodo = () => {
-    let todo = {text:value,id: todos.length,isDone:false}
+    let todo = {text: value, id: todos.length, isDone: false}
     setTodos([...todos, todo])
     setValue("")
+    handleClose()
   }
 
   const changeValue = (e) => {
@@ -70,13 +71,13 @@ const Todos = () => {
   const isDone = (id) => {
 
     setTodos(todos.map(todo => {
-      if(todo.id === id){
+      if (todo.id === id) {
         return {
           ...todo,
-          isDone:!todo.isDone
+          isDone: !todo.isDone
         }
       }
-      return  todo
+      return todo
     }))
   }
 
@@ -85,7 +86,7 @@ const Todos = () => {
     <>
       <div>
       </div>
-          <Button variant="contained" onClick={handleOpen}>Write a  Task</Button>
+      <Button variant="contained" onClick={handleOpen}>Write a Task</Button>
       <div>
         <Modal
           open={open}
@@ -97,17 +98,16 @@ const Todos = () => {
             <Typography id="modal-modal-title" variant="h6" component="h2">
               <input value={value} onChange={changeValue}/>
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              <Button variant="contained" onClick={addTodo}>Add Task</Button>
+            <Typography id="modal-modal-description" sx={{mt: 2}}>
+              {value ? <Button variant="contained" onClick={addTodo}>Add Task</Button> :<Button disabled variant="contained">Add Task</Button>  }
             </Typography>
           </Box>
         </Modal>
       </div>
       <div>
         {todos ? todos.map(todo => <div className="todo-items">
-          {/*<img onClick={() => isDone(todo.id)} src={Done} className="icon-item" alt="done image"/>*/}
-          {todo.isDone ? <img onClick={() => isDone(todo.id)} src={Done} className="icon-item" alt="done image"/> : <img onClick={() => isDone(todo.id)} src={IsntDone} className="icon-item" alt="done image"/>}
-          {/*{done}*/}
+          {todo.isDone ? <img onClick={() => isDone(todo.id)} src={Done} className="icon-item" alt="done image"/>
+            : <img onClick={() => isDone(todo.id)} src={IsntDone} className="icon-item" alt="done image"/>}
           <p>{todo.text}</p>
           <img onClick={() => onDelete(todo.id)} src={Delete} className="icon-item" alt="delete image"/>
         </div>) : null}
