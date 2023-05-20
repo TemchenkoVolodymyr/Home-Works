@@ -4,10 +4,22 @@ import Done from "../../assets/done.png"
 import IsntDone from "../../assets/isntDone.png"
 import "./Todos.css"
 
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 
-
+const style = {
+  position: 'absolute' ,
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 
 const Todos = () => {
@@ -32,6 +44,10 @@ const Todos = () => {
   )
   let [value, setValue] = useState("")
   let [status, setStatus] = useState(true)
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const addTodo = () => {
     let todo = {text:value,id: todos.length,isDone:false}
@@ -63,15 +79,30 @@ const Todos = () => {
       return  todo
     }))
   }
-console.log(todos.isDone)
-  // const done =  todos.isDone ? <img onClick={() => isDone(todo.id)} src={Done} className="icon-item" alt="done image"/> : <img onClick={() => isDone(todo.id)} src={Delete} className="icon-item" alt="done image"/>
-console.log(todos)
+
+
   return (
     <>
       <div>
-        <input value={value} onChange={changeValue}/>
       </div>
-      <button onClick={addTodo}>add task</button>
+          <Button variant="contained" onClick={handleOpen}>Write a  Task</Button>
+      <div>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              <input value={value} onChange={changeValue}/>
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              <Button variant="contained" onClick={addTodo}>Add Task</Button>
+            </Typography>
+          </Box>
+        </Modal>
+      </div>
       <div>
         {todos ? todos.map(todo => <div className="todo-items">
           {/*<img onClick={() => isDone(todo.id)} src={Done} className="icon-item" alt="done image"/>*/}
