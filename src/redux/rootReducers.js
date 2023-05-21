@@ -14,6 +14,7 @@ import {usersReducer} from "../CreateUsersBox/Users/usersReducer";
 import { reducer as formReducer } from 'redux-form';
 import {authorizationReducer} from "../router/requireAuth/AuthorizationReducer";
 import {reducerComponentA} from "../Lesson-7/CallbackRedux/reducerComponentA";
+import {reduxShouldCU} from "../Lesson-8/useEffect/reduxShouldComponentUpdate";
 
 
 
@@ -34,5 +35,6 @@ export default combineReducers ({
   users:usersReducer,
   form:formReducer,
   isAuth:authorizationReducer,
-  componentValue:reducerComponentA
+  componentValue:reducerComponentA,
+  shouldUC:reduxShouldCU,
 })
