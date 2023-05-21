@@ -1,17 +1,23 @@
 import React, {useEffect, useState} from 'react';
+import "./Tick.css"
 
 const Tick = (props) => {
 
-
-  let [time,setTime] = useState("")
+  let [date, setDate] = useState(props.date)
 
   useEffect(() => {
-   setTime( props.date.toLocaleString())
+    setDate(props.date)
+
   },[props.date])
-console.log(props)
+
+
   return (
-    <div>
-      <p>Сейчас {time}</p>
+    <div className="bookacket">
+
+      <div className="uncomenkad">
+        <div className="vemekunys">{date.toLocaleTimeString()}</div>
+      </div>
+      <span></span>
     </div>
   );
 };

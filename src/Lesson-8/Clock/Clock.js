@@ -1,20 +1,23 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Tick from "./Tick";
 
 const Clock = () => {
 
-  const tick = () => (
-        <Tick value="asd" date={new Date()}/>
+  let [time,setTime] = useState(new Date())
 
-  )
+  useEffect(() => {
+    let timeId = setInterval(() => {
+      setTime(new Date());
+    })
+
+    return () =>{
+      clearInterval(timeId)
+    }
+  })
   return (
-
     <>
-      {tick}
+      <Tick date={time}/>
     </>
-    // <div>
-    //   {tick}
-    // </div>
   )
 };
 
