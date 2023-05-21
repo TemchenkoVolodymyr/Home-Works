@@ -36,6 +36,7 @@ import LessonSixth from "./Lesson-6/LessonSixth";
 import LessonSeventh from "./Lesson-7/LessonSeventh";
 import Todos from "./Lesson-7/Todos/Todos";
 import ComponentA from "./Lesson-7/CallbackRedux/ComponentA";
+import LessonEighth from "./Lesson-8/LessonEighth";
 
 const App = () => {
 
@@ -66,6 +67,7 @@ const App = () => {
           <Route path="lessons-7" element={<LessonSeventh />}></Route>
           <Route path="lessons-7/todos" element={<Todos />}></Route>
           <Route path="lessons-7/componentA" element={<ComponentA />}></Route>
+          <Route path="lessons-8" element={<LessonEighth />}></Route>
           {/*<Route path="login" element={<ReduxForm/>}></Route>*/}
 
           {/*<Route path="post" element={<Posts/>}></Route>*/}

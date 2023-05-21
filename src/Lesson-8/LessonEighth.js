@@ -1,11 +1,12 @@
 import React from 'react';
+import Clock from "./Clock/Clock";
 
-const LessonEigth = () => {
+const LessonEighth = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Clock/>
+    </>
   );
 };
 
-export default LessonEigth;
+export default LessonEighth;
