@@ -43,6 +43,8 @@ import Shop from "./Lesson_9/OnlineShop/Shop";
 import Items, {InfoItems} from "./Lesson_9/OnlineShop/Items";
 import Contacts from "./Lesson_9/OnlineShop/Contacts";
 import SecretShop from "./Lesson_9/OnlineShop/SecretShop";
+import LessonTen from "./Lesson_10/LessonTen";
+import ErrorPage from "./Lesson_10/ErrorPage/Error";
 
 const App = () => {
 
@@ -81,6 +83,8 @@ const App = () => {
           <Route path="lessons-9/shop/contacts" element={<Contacts />}></Route>
           <Route path="lessons-9/shop/items/:id" element={<InfoItems />}></Route>
           <Route path="lessons-9/shop/secret" element={<SecretShop />}></Route>
+          <Route path="lessons-10" element={<LessonTen/>}></Route>
+          <Route path="*" element={<ErrorPage/>}></Route>
           {/*<Route path="login" element={<ReduxForm/>}></Route>*/}
 
           {/*<Route path="post" element={<Posts/>}></Route>*/}
