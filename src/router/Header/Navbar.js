@@ -18,6 +18,7 @@ export const Navbar = () => {
       <CustomLink className="link" to='/lessons-6'>Lessons 6</CustomLink>
       <CustomLink className="link" to='/lessons-7'>Lessons 7</CustomLink>
       <CustomLink className="link" to='/lessons-8'>Lessons 8</CustomLink>
+      <CustomLink className="link" to='/lessons-9'>Lessons 9</CustomLink>
       {/*<CustomLink className="link" to='/login'>Login</CustomLink>*/}
       {/*<CustomLink className="link" to='/post'>Posts</CustomLink>*/}
       {/*<CustomLink className="link" to='/user'>users</CustomLink>*/}

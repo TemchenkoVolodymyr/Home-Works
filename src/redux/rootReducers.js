@@ -36,5 +36,5 @@ export default combineReducers ({
   form:formReducer,
   isAuth:authorizationReducer,
   componentValue:reducerComponentA,
-  shouldUC:reduxShouldCU,
+
 })

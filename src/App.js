@@ -38,6 +38,11 @@ import Todos from "./Lesson-7/Todos/Todos";
 import ComponentA from "./Lesson-7/CallbackRedux/ComponentA";
 import LessonEighth from "./Lesson-8/LessonEighth";
 import Clock from "./Lesson-8/Clock/Clock";
+import LessonNinth from "./Lesson_9/LessonNinth";
+import Shop from "./Lesson_9/OnlineShop/Shop";
+import Items, {InfoItems} from "./Lesson_9/OnlineShop/Items";
+import Contacts from "./Lesson_9/OnlineShop/Contacts";
+import SecretShop from "./Lesson_9/OnlineShop/SecretShop";
 
 const App = () => {
 
@@ -70,6 +75,12 @@ const App = () => {
           <Route path="lessons-7/componentA" element={<ComponentA />}></Route>
           <Route path="lessons-8" element={<LessonEighth />}></Route>
           <Route path="lessons-8/clock" element={<Clock />}></Route>
+          <Route path="lessons-9" element={<LessonNinth />}></Route>
+          <Route path="lessons-9/shop" element={<Shop />}></Route>
+          <Route path="lessons-9/shop/items" element={<Items />}></Route>
+          <Route path="lessons-9/shop/contacts" element={<Contacts />}></Route>
+          <Route path="lessons-9/shop/items/:id" element={<InfoItems />}></Route>
+          <Route path="lessons-9/shop/secret" element={<SecretShop />}></Route>
           {/*<Route path="login" element={<ReduxForm/>}></Route>*/}
 
           {/*<Route path="post" element={<Posts/>}></Route>*/}
