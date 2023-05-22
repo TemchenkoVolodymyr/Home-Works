@@ -1,10 +1,13 @@
 import React from 'react';
-import CustomLink from "../router/Header/CustomLink/CustomLink";
+import ErrorBoundary from "./ErrorBoundary";
+import ToDoList from "../ToDoAsynhron/ToDoList";
 
 const LessonTen = () => {
   return (
     <div>
-
+      <ErrorBoundary>
+        <ToDoList/>
+      </ErrorBoundary>
     </div>
   );
 };

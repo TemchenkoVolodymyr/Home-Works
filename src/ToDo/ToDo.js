@@ -17,14 +17,16 @@ class ToDo extends Component {
     this.props.dispatch(resetInputValue())
     return currentInputValue
   }
-deleteTaskLists = (e) => {
+  deleteTaskLists = (e) => {
     e.preventDefault()
-  this.props.dispatch(deleteTaskList())
-}
+    this.props.dispatch(deleteTaskList())
+  }
+
   render() {
     return (
       <>
-        <Input value={this.props.input} dispatch={this.props.dispatch} addToTaskList={(e) => this.addToTaskList(e)} deleteTaskLists={(e) => this.deleteTaskLists(e)}/>
+        <Input value={this.props.input} dispatch={this.props.dispatch} addToTaskList={(e) => this.addToTaskList(e)}
+               deleteTaskLists={(e) => this.deleteTaskLists(e)}/>
         <Lists lists={this.props.lists}/>
       </>
     );

@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {getDoListItemAC} from "./ToDoListAction";
 import {compose} from "redux";
-import RequireAuth from "../router/requireAuth/RequireAuth";
-
-
 
 class ToDoListAsynchron extends Component {
 

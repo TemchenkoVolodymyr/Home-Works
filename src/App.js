@@ -44,7 +44,7 @@ import Items, {InfoItems} from "./Lesson_9/OnlineShop/Items";
 import Contacts from "./Lesson_9/OnlineShop/Contacts";
 import SecretShop from "./Lesson_9/OnlineShop/SecretShop";
 import LessonTen from "./Lesson_10/LessonTen";
-import ErrorPage from "./Lesson_10/ErrorPage/Error";
+import ErrorPage from "./Lesson_10/ErrorPage/ErrorPage";
 
 const App = () => {
 
