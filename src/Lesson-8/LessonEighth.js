@@ -1,14 +1,18 @@
 import React from 'react';
 import Clock from "./Clock/Clock";
 import CustomLink from "../router/Header/CustomLink/CustomLink";
-import ShouldComponentUpdate from "./useEffect/ShouldComponentUpdate";
+import ComponentDidMount from "./useEffect/ComponentDidMount";
+import MemoComponent from "./useMemo/MemoComponent";
+import ReactMemo from "./useMemo/ReactMemo/ReactMemo";
 
 const LessonEighth = () => {
   return (
     <>
       {/*<Clock/>*/}
       <CustomLink  to={'clock'}>Clock</CustomLink>
-      <ShouldComponentUpdate />
+      <CustomLink  to={'didMount'}>ComponentDidMount</CustomLink>
+      <MemoComponent/>
+      <ReactMemo />
     </>
   );
 };

@@ -45,6 +45,7 @@ import Contacts from "./Lesson_9/OnlineShop/Contacts";
 import SecretShop from "./Lesson_9/OnlineShop/SecretShop";
 import LessonTen from "./Lesson_10/LessonTen";
 import ErrorPage from "./Lesson_10/ErrorPage/ErrorPage";
+import ComponentDidMount from "./Lesson-8/useEffect/ComponentDidMount";
 
 const App = () => {
 
@@ -77,6 +78,7 @@ const App = () => {
           <Route path="lessons-7/componentA" element={<ComponentA />}></Route>
           <Route path="lessons-8" element={<LessonEighth />}></Route>
           <Route path="lessons-8/clock" element={<Clock />}></Route>
+          <Route path="lessons-8/didMount" element={<ComponentDidMount />}></Route>
           <Route path="lessons-9" element={<LessonNinth />}></Route>
           <Route path="lessons-9/shop" element={<Shop />}></Route>
           <Route path="lessons-9/shop/items" element={<Items />}></Route>
